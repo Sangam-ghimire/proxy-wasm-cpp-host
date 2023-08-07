@@ -308,22 +308,31 @@ cc_library(
     ],
 )
 
+# cc_library(
+#     name = "lib_wasmedge",
+#     deps = [
+#         ":base_lib",
+#         ":wasmedge_lib",
+#     ] + proxy_wasm_select_engine_null(
+#         [":null_lib"],
+#     ) + proxy_wasm_select_engine_v8(
+#         [":v8_lib"],
+#     ) + proxy_wasm_select_engine_wamr(
+#         [":wamr_lib"],
+#     ) + proxy_wasm_select_engine_wasmedge(
+#         [":wasmedge_lib"],
+#     ) + proxy_wasm_select_engine_wasmtime(
+#         [":wasmtime_lib"],
+#         [":prefixed_wasmtime_lib"],
+#     ) + proxy_wasm_select_engine_wavm(
+#         [":wavm_lib"],
+#     ),
+# )
+
 cc_library(
     name = "lib",
     deps = [
         ":base_lib",
-    ] + proxy_wasm_select_engine_null(
-        [":null_lib"],
-    ) + proxy_wasm_select_engine_v8(
-        [":v8_lib"],
-    ) + proxy_wasm_select_engine_wamr(
-        [":wamr_lib"],
-    ) + proxy_wasm_select_engine_wasmedge(
-        [":wasmedge_lib"],
-    ) + proxy_wasm_select_engine_wasmtime(
-        [":wasmtime_lib"],
-        [":prefixed_wasmtime_lib"],
-    ) + proxy_wasm_select_engine_wavm(
-        [":wavm_lib"],
-    ),
+        ":wasmedge_lib",
+    ],
 )

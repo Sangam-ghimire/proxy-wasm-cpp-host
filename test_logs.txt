@@ -1,0 +1,1136 @@
+WARNING: Streamed test output requested. All tests will be run locally, without sharding, one at a time
+Loading: 
+Loading: 0 packages loaded
+DEBUG: /home/sangubabes/.cache/bazel/_bazel_sangubabes/79b17beb98d1628e36d04e05a87da4f0/external/rules_python/python/repositories.bzl:8:10: py_repositories is a no-op and is deprecated. You can remove this from your WORKSPACE file
+DEBUG: /home/sangubabes/.cache/bazel/_bazel_sangubabes/79b17beb98d1628e36d04e05a87da4f0/external/rules_rust/rust/repositories.bzl:944:14: `rust_repository_set.version` is deprecated. Instead use `rust_repository_set.versions`
+DEBUG: /home/sangubabes/.cache/bazel/_bazel_sangubabes/79b17beb98d1628e36d04e05a87da4f0/external/rules_rust/rust/repositories.bzl:944:14: `rust_repository_set.version` is deprecated. Instead use `rust_repository_set.versions`
+Analyzing: 13 targets (1 packages loaded, 0 targets configured)
+Analyzing: 13 targets (168 packages loaded, 5962 targets configured)
+INFO: Analyzed 13 targets (364 packages loaded, 38873 targets configured).
+
+INFO: Found 1 target and 12 test targets...
+[0 / 13] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+[19 / 317] Compiling src/crypto/poly1305/poly1305_vec.c; 0s linux-sandbox ... (8 actions running)
+[41 / 317] Foreign Cc - CMake: Building wasmedge_lib; 1s linux-sandbox ... (8 actions running)
+[84 / 317] Foreign Cc - CMake: Building wasmedge_lib; 2s linux-sandbox ... (8 actions running)
+[130 / 317] Foreign Cc - CMake: Building wasmedge_lib; 3s linux-sandbox ... (8 actions, 7 running)
+[182 / 317] Foreign Cc - CMake: Building wasmedge_lib; 4s linux-sandbox ... (8 actions, 7 running)
+[212 / 317] Foreign Cc - CMake: Building wasmedge_lib; 6s linux-sandbox ... (8 actions, 7 running)
+[239 / 317] Foreign Cc - CMake: Building wasmedge_lib; 7s linux-sandbox ... (7 actions, 6 running)
+[345 / 403] Foreign Cc - CMake: Building wasmedge_lib; 10s linux-sandbox ... (8 actions running)
+[349 / 403] Foreign Cc - CMake: Building wasmedge_lib; 12s linux-sandbox ... (8 actions, 7 running)
+[352 / 403] Foreign Cc - CMake: Building wasmedge_lib; 15s linux-sandbox ... (6 actions running)
+[361 / 409] Foreign Cc - CMake: Building wasmedge_lib; 20s linux-sandbox ... (8 actions running)
+[369 / 409] Foreign Cc - CMake: Building wasmedge_lib; 24s linux-sandbox ... (8 actions, 7 running)
+[372 / 409] Foreign Cc - CMake: Building wasmedge_lib; 29s linux-sandbox ... (8 actions, 7 running)
+INFO: From Compiling googletest/src/gtest-death-test.cc:
+external/com_google_googletest/googletest/src/gtest-death-test.cc: In function 'bool testing::internal::StackGrowsDown()':
+external/com_google_googletest/googletest/src/gtest-death-test.cc:1301:24: warning: 'dummy' may be used uninitialized [-Wmaybe-uninitialized]
+ 1301 |   StackLowerThanAddress(&dummy, &result);
+      |   ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+external/com_google_googletest/googletest/src/gtest-death-test.cc:1290:13: note: by argument 1 of type 'const void*' to 'void testing::internal::StackLowerThanAddress(const void*, bool*)' declared here
+ 1290 | static void StackLowerThanAddress(const void* ptr, bool* result) {
+      |             ^~~~~~~~~~~~~~~~~~~~~
+external/com_google_googletest/googletest/src/gtest-death-test.cc:1299:7: note: 'dummy' declared here
+ 1299 |   int dummy;
+      |       ^~~~~
+[379 / 409] Foreign Cc - CMake: Building wasmedge_lib; 34s linux-sandbox ... (8 actions, 7 running)
+[461 / 511] Foreign Cc - CMake: Building wasmedge_lib; 41s linux-sandbox ... (4 actions running)
+[461 / 511] Foreign Cc - CMake: Building wasmedge_lib; 48s linux-sandbox ... (4 actions running)
+[465 / 511] Foreign Cc - CMake: Building wasmedge_lib; 62s linux-sandbox ... (3 actions running)
+[471 / 511] Foreign Cc - CMake: Building wasmedge_lib; 73s linux-sandbox
+[471 / 511] Foreign Cc - CMake: Building wasmedge_lib; 85s linux-sandbox
+[471 / 511] Foreign Cc - CMake: Building wasmedge_lib; 109s linux-sandbox
+INFO: From Compiling src/wasmedge/wasmedge.cc:
+src/wasmedge/wasmedge.cc: In member function 'virtual bool proxy_wasm::WasmEdge::WasmEdge::link(std::string_view)':
+src/wasmedge/wasmedge.cc:358:24: warning: comparison of integer expressions of different signedness: 'int' and 'uint32_t' {aka 'unsigned int'} [-Wsign-compare]
+  358 |     for (auto i = 0; i < func_num; i++) {
+      |                      ~~^~~~~~~~~~
+Running main() from gmock_main.cc
+[==========] Running 4 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 4 tests from TestBytecodeUtil
+[ RUN      ] TestBytecodeUtil.getCustomSection
+[       OK ] TestBytecodeUtil.getCustomSection (0 ms)
+[ RUN      ] TestBytecodeUtil.getFunctionNameIndex
+[       OK ] TestBytecodeUtil.getFunctionNameIndex (8 ms)
+[ RUN      ] TestBytecodeUtil.getStrippedSource
+[       OK ] TestBytecodeUtil.getStrippedSource (5 ms)
+[ RUN      ] TestBytecodeUtil.getAbiVersion
+[       OK ] TestBytecodeUtil.getAbiVersion (2 ms)
+[----------] 4 tests from TestBytecodeUtil (15 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 1 test suite ran. (15 ms total)
+[  PASSED  ] 4 tests.
+Running main() from gmock_main.cc
+[==========] Running 7 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 7 tests from WasmEngines/TestVm
+[ RUN      ] WasmEngines/TestVm.Environment/wasmedge
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [vm->host] wasi_snapshot_preview1.environ_sizes_get(1048572, 1048568)
+TRACE from integration: [vm<-host] wasi_snapshot_preview1.environ_sizes_get return: 0
+TRACE from integration: [vm->host] wasi_snapshot_preview1.environ_get(1060160, 1060128)
+TRACE from integration: [vm<-host] wasi_snapshot_preview1.environ_get return: 0
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] run()
+TRACE from integration: [vm->host] wasi_snapshot_preview1.fd_write(1, 1048184, 1, 1048172)
+TRACE from integration: [vm<-host] wasi_snapshot_preview1.fd_write return: 0
+TRACE from integration: [vm->host] wasi_snapshot_preview1.fd_write(1, 1048184, 1, 1048172)
+TRACE from integration: [vm<-host] wasi_snapshot_preview1.fd_write return: 0
+TRACE from integration: [host<-vm] run return: void
+[       OK ] WasmEngines/TestVm.Environment/wasmedge (21 ms)
+[ RUN      ] WasmEngines/TestVm.WithoutEnvironment/wasmedge
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [vm->host] wasi_snapshot_preview1.environ_sizes_get(1048572, 1048568)
+TRACE from integration: [vm<-host] wasi_snapshot_preview1.environ_sizes_get return: 0
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] run()
+TRACE from integration: [host<-vm] run return: void
+[       OK ] WasmEngines/TestVm.WithoutEnvironment/wasmedge (9 ms)
+[ RUN      ] WasmEngines/TestVm.Clock/wasmedge
+TRACE from integration: [host->vm] run()
+TRACE from integration: [vm->host] wasi_snapshot_preview1.environ_sizes_get(1048572, 1048568)
+TRACE from integration: [vm<-host] wasi_snapshot_preview1.environ_sizes_get return: 0
+TRACE from integration: [vm->host] wasi_snapshot_preview1.clock_time_get(1, 1, 1048392)
+TRACE from integration: [vm<-host] wasi_snapshot_preview1.clock_time_get return: 0
+TRACE from integration: [vm->host] wasi_snapshot_preview1.fd_write(1, 1048200, 1, 1048188)
+TRACE from integration: [vm<-host] wasi_snapshot_preview1.fd_write return: 0
+TRACE from integration: [vm->host] wasi_snapshot_preview1.clock_time_get(0, 1, 1048392)
+TRACE from integration: [vm<-host] wasi_snapshot_preview1.clock_time_get return: 0
+TRACE from integration: [vm->host] wasi_snapshot_preview1.fd_write(1, 1048200, 1, 1048188)
+TRACE from integration: [vm<-host] wasi_snapshot_preview1.fd_write return: 0
+TRACE from integration: [host<-vm] run return: void
+[       OK ] WasmEngines/TestVm.Clock/wasmedge (12 ms)
+[ RUN      ] WasmEngines/TestVm.RandomZero/wasmedge
+TRACE from integration: [host->vm] run(0)
+TRACE from integration: [vm->host] wasi_snapshot_preview1.environ_sizes_get(1048572, 1048568)
+TRACE from integration: [vm<-host] wasi_snapshot_preview1.environ_sizes_get return: 0
+TRACE from integration: [vm->host] wasi_snapshot_preview1.random_get(1, 0)
+TRACE from integration: [vm<-host] wasi_snapshot_preview1.random_get return: 0
+TRACE from integration: [vm->host] wasi_snapshot_preview1.fd_write(1, 1048232, 1, 1048220)
+TRACE from integration: [vm<-host] wasi_snapshot_preview1.fd_write return: 0
+TRACE from integration: [host<-vm] run return: void
+[       OK ] WasmEngines/TestVm.RandomZero/wasmedge (11 ms)
+[ RUN      ] WasmEngines/TestVm.RandomSmall/wasmedge
+TRACE from integration: [host->vm] run(32)
+TRACE from integration: [vm->host] wasi_snapshot_preview1.environ_sizes_get(1048572, 1048568)
+TRACE from integration: [vm<-host] wasi_snapshot_preview1.environ_sizes_get return: 0
+TRACE from integration: [vm->host] wasi_snapshot_preview1.random_get(1056768, 32)
+TRACE from integration: [vm<-host] wasi_snapshot_preview1.random_get return: 0
+TRACE from integration: [vm->host] wasi_snapshot_preview1.fd_write(1, 1048232, 1, 1048220)
+TRACE from integration: [vm<-host] wasi_snapshot_preview1.fd_write return: 0
+TRACE from integration: [host<-vm] run return: void
+[       OK ] WasmEngines/TestVm.RandomSmall/wasmedge (8 ms)
+[ RUN      ] WasmEngines/TestVm.RandomLarge/wasmedge
+TRACE from integration: [host->vm] run(65536)
+TRACE from integration: [vm->host] wasi_snapshot_preview1.environ_sizes_get(1048572, 1048568)
+TRACE from integration: [vm<-host] wasi_snapshot_preview1.environ_sizes_get return: 0
+TRACE from integration: [vm->host] wasi_snapshot_preview1.random_get(1056768, 65536)
+TRACE from integration: [vm<-host] wasi_snapshot_preview1.random_get return: 0
+TRACE from integration: [vm->host] wasi_snapshot_preview1.fd_write(1, 1048232, 1, 1048220)
+TRACE from integration: [vm<-host] wasi_snapshot_preview1.fd_write return: 0
+TRACE from integration: [host<-vm] run return: void
+[       OK ] WasmEngines/TestVm.RandomLarge/wasmedge (10 ms)
+[ RUN      ] WasmEngines/TestVm.RandomTooLarge/wasmedge
+TRACE from integration: [host->vm] run(66560)
+TRACE from integration: [vm->host] wasi_snapshot_preview1.environ_sizes_get(1048572, 1048568)
+TRACE from integration: [vm<-host] wasi_snapshot_preview1.environ_sizes_get return: 0
+TRACE from integration: [vm->host] wasi_snapshot_preview1.random_get(1056768, 66560)
+TRACE from integration: [vm<-host] wasi_snapshot_preview1.random_get return: 28
+TRACE from integration: [vm->host] wasi_snapshot_preview1.fd_write(1, 1048232, 1, 1048220)
+TRACE from integration: [vm<-host] wasi_snapshot_preview1.fd_write return: 0
+TRACE from integration: [host<-vm] run return: void
+[       OK ] WasmEngines/TestVm.RandomTooLarge/wasmedge (9 ms)
+[----------] 7 tests from WasmEngines/TestVm (80 ms total)
+
+[----------] Global test environment tear-down
+[==========] 7 tests from 1 test suite ran. (80 ms total)
+[  PASSED  ] 7 tests.
+Running main() from gmock_main.cc
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from WasmEngines/TestVm
+[ RUN      ] WasmEngines/TestVm.HttpLogging/wasmedge
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1174, 14, 5246800, 5246796)
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 0)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 0)
+TRACE from integration: [host<-vm] proxy_on_configure return: 1
+TRACE from integration: [host->vm] proxy_on_context_create(2, 1)
+TRACE from integration: [vm->host] env.proxy_log(2, 5247304, 63)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_request_headers(2, 0, 0)
+TRACE from integration: [vm->host] env.proxy_log(2, 5247376, 79)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_request_headers return: 0
+TRACE from integration: [host->vm] proxy_on_response_headers(2, 0, 0)
+TRACE from integration: [vm->host] env.proxy_log(2, 5247376, 81)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_response_headers return: 0
+TRACE from integration: [host->vm] proxy_on_done(2)
+TRACE from integration: [vm->host] env.proxy_log(2, 5247304, 59)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_done return: 1
+TRACE from integration: [host->vm] proxy_on_delete(2)
+TRACE from integration: [vm->host] env.proxy_log(2, 5247304, 63)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_delete return: void
+TRACE from integration: [host->vm] proxy_on_done(1)
+TRACE from integration: [host<-vm] proxy_on_done return: 1
+TRACE from integration: [host->vm] proxy_on_delete(1)
+TRACE from integration: [host<-vm] proxy_on_delete return: void
+[       OK ] WasmEngines/TestVm.HttpLogging/wasmedge (5 ms)
+[----------] 1 test from WasmEngines/TestVm (5 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (5 ms total)
+[  PASSED  ] 1 test.
+Running main() from gmock_main.cc
+[==========] Running 0 tests from 0 test suites.
+[==========] 0 tests from 0 test suites ran. (0 ms total)
+[  PASSED  ] 0 tests.
+Running main() from gmock_main.cc
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from PairsUtilTest
+[ RUN      ] PairsUtilTest.EncodeDecode
+[       OK ] PairsUtilTest.EncodeDecode (0 ms)
+[----------] 1 test from PairsUtilTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+Running main() from gmock_main.cc
+[==========] Running 7 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 7 tests from WasmEngines/TestVm
+[ RUN      ] WasmEngines/TestVm.BadSignature/wasmedge
+ERROR from integration: Bad function signature for: run, want: i32 i32 -> i32, but the module exports: void -> void
+[       OK ] WasmEngines/TestVm.BadSignature/wasmedge (15 ms)
+[ RUN      ] WasmEngines/TestVm.StraceLogLevel/wasmedge
+TRACE from integration: [host->vm] run()
+TRACE from integration: [vm->host] wasi_snapshot_preview1.environ_sizes_get(1048572, 1048568)
+TRACE from integration: [vm<-host] wasi_snapshot_preview1.environ_sizes_get return: 0
+TRACE from integration: [vm->host] wasi_snapshot_preview1.clock_time_get(1, 1, 1048392)
+TRACE from integration: [vm<-host] wasi_snapshot_preview1.clock_time_get return: 0
+TRACE from integration: [vm->host] wasi_snapshot_preview1.fd_write(1, 1048200, 1, 1048188)
+TRACE from integration: [vm<-host] wasi_snapshot_preview1.fd_write return: 0
+TRACE from integration: [vm->host] wasi_snapshot_preview1.clock_time_get(0, 1, 1048392)
+TRACE from integration: [vm<-host] wasi_snapshot_preview1.clock_time_get return: 0
+TRACE from integration: [vm->host] wasi_snapshot_preview1.fd_write(1, 1048200, 1, 1048188)
+TRACE from integration: [vm<-host] wasi_snapshot_preview1.fd_write return: 0
+TRACE from integration: [host<-vm] run return: void
+[       OK ] WasmEngines/TestVm.StraceLogLevel/wasmedge (8 ms)
+[ RUN      ] WasmEngines/TestVm.TerminateExecution/wasmedge
+[       OK ] WasmEngines/TestVm.TerminateExecution/wasmedge (0 ms)
+[ RUN      ] WasmEngines/TestVm.WasmMemoryLimit/wasmedge
+[       OK ] WasmEngines/TestVm.WasmMemoryLimit/wasmedge (0 ms)
+[ RUN      ] WasmEngines/TestVm.Trap/wasmedge
+TRACE from integration: [host->vm] trigger()
+[2023-08-07 09:36:16.945] [error] execution failed: unreachable, Code: 0x89
+[2023-08-07 09:36:16.945] [error]     In instruction: unreachable (0x00) , Bytecode offset: 0x00003eb5
+ERROR from integration: Function: trigger failed: unreachable
+[       OK ] WasmEngines/TestVm.Trap/wasmedge (4 ms)
+[ RUN      ] WasmEngines/TestVm.Trap2/wasmedge
+TRACE from integration: [host->vm] trigger2(0)
+[2023-08-07 09:36:16.949] [error] execution failed: unreachable, Code: 0x89
+[2023-08-07 09:36:16.949] [error]     In instruction: unreachable (0x00) , Bytecode offset: 0x00003eb5
+ERROR from integration: Function: trigger2 failed: unreachable
+[       OK ] WasmEngines/TestVm.Trap2/wasmedge (4 ms)
+[ RUN      ] WasmEngines/TestVm.Callback/wasmedge
+TRACE from integration: [host->vm] run()
+TRACE from integration: [vm->host] env.callback()
+TRACE from integration: [vm<-host] env.callback return: void
+TRACE from integration: [host<-vm] run return: void
+TRACE from integration: [host->vm] run()
+TRACE from integration: [vm->host] env.callback()
+TRACE from integration: [vm<-host] env.callback return: void
+TRACE from integration: [host<-vm] run return: void
+TRACE from integration: [host->vm] run()
+TRACE from integration: [vm->host] env.callback()
+TRACE from integration: [vm<-host] env.callback return: void
+TRACE from integration: [host<-vm] run return: void
+TRACE from integration: [host->vm] run()
+TRACE from integration: [vm->host] env.callback()
+TRACE from integration: [vm<-host] env.callback return: void
+TRACE from integration: [host<-vm] run return: void
+TRACE from integration: [host->vm] run()
+TRACE from integration: [vm->host] env.callback()
+TRACE from integration: [vm<-host] env.callback return: void
+TRACE from integration: [host<-vm] run return: void
+TRACE from integration: [host->vm] run2(0)
+TRACE from integration: [vm->host] env.callback2(0)
+TRACE from integration: [vm<-host] env.callback2 return: 100
+TRACE from integration: [host<-vm] run2 return: 100100
+[       OK ] WasmEngines/TestVm.Callback/wasmedge (4 ms)
+[----------] 7 tests from WasmEngines/TestVm (35 ms total)
+
+[----------] Global test environment tear-down
+[==========] 7 tests from 1 test suite ran. (35 ms total)
+[  PASSED  ] 7 tests.
+Running main() from gmock_main.cc
+[==========] Running 3 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 3 tests from WasmEngines/TestVm
+[ RUN      ] WasmEngines/TestVm.MallocNoHostcalls/wasmedge
+[       OK ] WasmEngines/TestVm.MallocNoHostcalls/wasmedge (0 ms)
+[ RUN      ] WasmEngines/TestVm.MallocWithLog/wasmedge
+[       OK ] WasmEngines/TestVm.MallocWithLog/wasmedge (0 ms)
+[ RUN      ] WasmEngines/TestVm.MallocWithHostcall/wasmedge
+[       OK ] WasmEngines/TestVm.MallocWithHostcall/wasmedge (0 ms)
+[----------] 3 tests from WasmEngines/TestVm (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 3 tests.
+Running main() from gmock_main.cc
+[==========] Running 4 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 4 tests from SharedData
+[ RUN      ] SharedData.SingleThread
+[       OK ] SharedData.SingleThread (0 ms)
+[ RUN      ] SharedData.Concurrent
+[       OK ] SharedData.Concurrent (0 ms)
+[ RUN      ] SharedData.DeleteByVmId
+[       OK ] SharedData.DeleteByVmId (0 ms)
+[ RUN      ] SharedData.VmIdHandleCleanup
+[       OK ] SharedData.VmIdHandleCleanup (0 ms)
+[----------] 4 tests from SharedData (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 4 tests.
+Running main() from gmock_main.cc
+[==========] Running 5 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 5 tests from SharedQueue
+[ RUN      ] SharedQueue.NextQueueToken
+[       OK ] SharedQueue.NextQueueToken (1 ms)
+[ RUN      ] SharedQueue.SingleThread
+[       OK ] SharedQueue.SingleThread (0 ms)
+[ RUN      ] SharedQueue.Concurrent
+[       OK ] SharedQueue.Concurrent (1 ms)
+[ RUN      ] SharedQueue.DeleteByVmId
+[       OK ] SharedQueue.DeleteByVmId (0 ms)
+[ RUN      ] SharedQueue.VmIdHandleCleanup
+[       OK ] SharedQueue.VmIdHandleCleanup (0 ms)
+[----------] 5 tests from SharedQueue (2 ms total)
+
+[----------] Global test environment tear-down
+[==========] 5 tests from 1 test suite ran. (2 ms total)
+[  PASSED  ] 5 tests.
+Running main() from gmock_main.cc
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from VmIdHandle
+[ RUN      ] VmIdHandle.Basic
+[       OK ] VmIdHandle.Basic (0 ms)
+[----------] 1 test from VmIdHandle (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+Running main() from gmock_main.cc
+[==========] Running 3 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 3 tests from WasmEngines/TestVm
+[ RUN      ] WasmEngines/TestVm.GetOrCreateThreadLocalWasmFailCallbacks/wasmedge
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 9)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 9)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+ERROR from integration: runtime error msg
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 9)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+ERROR from integration: runtime error msg
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 9)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+[       OK ] WasmEngines/TestVm.GetOrCreateThreadLocalWasmFailCallbacks/wasmedge (26 ms)
+[ RUN      ] WasmEngines/TestVm.AlwaysApplyCanary/wasmedge
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 15)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 1
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 15)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 1
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 0)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 0
+Failed to configure base Wasm plugin
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 15)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 1
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 15)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 1
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 0)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 0
+Failed to configure base Wasm plugin
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 15)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 1
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 15)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 1
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 0)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 0
+Failed to configure base Wasm plugin
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 15)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 1
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 15)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 1
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 0)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 0
+Failed to configure base Wasm plugin
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 15)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 1
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 15)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 1
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 0)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 0
+Failed to configure base Wasm plugin
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 15)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 1
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 15)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 1
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 0)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 0
+Failed to configure base Wasm plugin
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 15)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 1
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 15)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 1
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 0)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 0
+Failed to configure base Wasm plugin
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 15)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 1
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 15)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 1
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 0)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 0
+Failed to configure base Wasm plugin
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 15)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 1
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 15)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 1
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 0)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 0
+Failed to configure base Wasm plugin
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 15)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 1
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 15)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 1
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 0)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 0
+Failed to configure base Wasm plugin
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 15)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 1
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 15)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 1
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 0)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 0
+Failed to configure base Wasm plugin
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 15)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 1
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 15)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 1
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 0)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 0
+Failed to configure base Wasm plugin
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 15)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 1
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 15)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 1
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 0)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 0
+Failed to configure base Wasm plugin
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 15)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 1
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 15)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 1
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 0)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 0
+Failed to configure base Wasm plugin
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 15)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 1
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 15)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 1
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 0)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 0
+Failed to configure base Wasm plugin
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 15)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 1
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 15)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 1
+TRACE from integration: [host->vm] _initialize()
+TRACE from integration: [host<-vm] _initialize return: void
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [vm->host] env.proxy_get_property(1126, 14, 5247392, 5247388)
+TRACE from integration: [host->vm] malloc(9)
+TRACE from integration: [host<-vm] malloc return: 5247736
+TRACE from integration: [vm<-host] env.proxy_get_property return: 0
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 11)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_configure(1, 0)
+TRACE from integration: [vm->host] env.proxy_log(0, 5248072, 73)
+TRACE from integration: [vm<-host] env.proxy_log return: 0
+TRACE from integration: [host<-vm] proxy_on_configure return: 0
+Failed to configure base Wasm plugin
+[       OK ] WasmEngines/TestVm.AlwaysApplyCanary/wasmedge (140 ms)
+[ RUN      ] WasmEngines/TestVm.CleanupThreadLocalCacheKeys/wasmedge
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 9)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 9)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 9)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 9)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+TRACE from integration: [host->vm] proxy_on_context_create(1, 0)
+TRACE from integration: [host<-vm] proxy_on_context_create return: void
+TRACE from integration: [host->vm] proxy_on_vm_start(1, 9)
+TRACE from integration: [host<-vm] proxy_on_vm_start return: 1
+[       OK ] WasmEngines/TestVm.CleanupThreadLocalCacheKeys/wasmedge (20 ms)
+[----------] 3 tests from WasmEngines/TestVm (186 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 1 test suite ran. (186 ms total)
+[  PASSED  ] 3 tests.
+Running main() from gmock_main.cc
+[==========] Running 4 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 4 tests from WasmEngines/TestVm
+[ RUN      ] WasmEngines/TestVm.Basic/wasmedge
+[       OK ] WasmEngines/TestVm.Basic/wasmedge (0 ms)
+[ RUN      ] WasmEngines/TestVm.Memory/wasmedge
+[       OK ] WasmEngines/TestVm.Memory/wasmedge (14 ms)
+[ RUN      ] WasmEngines/TestVm.Clone/wasmedge
+[       OK ] WasmEngines/TestVm.Clone/wasmedge (0 ms)
+[ RUN      ] WasmEngines/TestVm.CloneUntilOutOfMemory/wasmedge
+[       OK ] WasmEngines/TestVm.CloneUntilOutOfMemory/wasmedge (0 ms)
+[----------] 4 tests from WasmEngines/TestVm (14 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 1 test suite ran. (14 ms total)
+[  PASSED  ] 4 tests.
+INFO: Elapsed time: 129.316s, Critical Path: 122.68s
+INFO: 511 processes: 168 internal, 343 linux-sandbox.
+INFO: Build completed successfully, 511 total actions
+//test:bytecode_util_test                                                PASSED in 0.0s
+  WARNING: //test:bytecode_util_test: Test execution time (0.0s excluding execution overhead) outside of range for MODERATE tests. Consider setting timeout="short" or size="small".
+//test:exports_test                                                      PASSED in 0.1s
+  WARNING: //test:exports_test: Test execution time (0.1s excluding execution overhead) outside of range for MODERATE tests. Consider setting timeout="short" or size="small".
+//test:logging_test                                                      PASSED in 0.0s
+  WARNING: //test:logging_test: Test execution time (0.0s excluding execution overhead) outside of range for MODERATE tests. Consider setting timeout="short" or size="small".
+//test:null_vm_test                                                      PASSED in 0.0s
+  WARNING: //test:null_vm_test: Test execution time (0.0s excluding execution overhead) outside of range for MODERATE tests. Consider setting timeout="short" or size="small".
+//test:pairs_util_test                                                   PASSED in 0.0s
+  WARNING: //test:pairs_util_test: Test execution time (0.0s excluding execution overhead) outside of range for MODERATE tests. Consider setting timeout="short" or size="small".
+//test:runtime_test                                                      PASSED in 0.1s
+  WARNING: //test:runtime_test: Test execution time (0.1s excluding execution overhead) outside of range for LONG tests. Consider setting timeout="short" or size="small".
+//test:security_test                                                     PASSED in 0.0s
+  WARNING: //test:security_test: Test execution time (0.0s excluding execution overhead) outside of range for MODERATE tests. Consider setting timeout="short" or size="small".
+//test:shared_data                                                       PASSED in 0.0s
+  WARNING: //test:shared_data: Test execution time (0.0s excluding execution overhead) outside of range for MODERATE tests. Consider setting timeout="short" or size="small".
+//test:shared_queue                                                      PASSED in 0.0s
+  WARNING: //test:shared_queue: Test execution time (0.0s excluding execution overhead) outside of range for MODERATE tests. Consider setting timeout="short" or size="small".
+//test:vm_id_handle                                                      PASSED in 0.0s
+  WARNING: //test:vm_id_handle: Test execution time (0.0s excluding execution overhead) outside of range for MODERATE tests. Consider setting timeout="short" or size="small".
+//test:wasm_test                                                         PASSED in 0.2s
+  WARNING: //test:wasm_test: Test execution time (0.2s excluding execution overhead) outside of range for MODERATE tests. Consider setting timeout="short" or size="small".
+//test:wasm_vm_test                                                      PASSED in 0.1s
+  WARNING: //test:wasm_vm_test: Test execution time (0.1s excluding execution overhead) outside of range for LONG tests. Consider setting timeout="short" or size="small".
+
+Executed 12 out of 12 tests: 12 tests pass.
+INFO: Build completed successfully, 511 total actions
